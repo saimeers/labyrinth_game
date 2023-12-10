@@ -47,3 +47,21 @@ TagManager:
   - name: Door
     uniqueID: 481608363
     locked: 0
+  - name: way_1
+    uniqueID: 654692239
+    locked: 0
+  - name: way_2
+    uniqueID: 2117369221
+    locked: 0
+  - name: way_3
+    uniqueID: 3434728651
+    locked: 0
+  - name: player
+    uniqueID: 1511530105
+    locked: 0
+  - name: crtl
+    uniqueID: 1856339947
+    locked: 0
+  - name: logos
+    uniqueID: 1320515655
+    locked: 0
