@@ -377,6 +377,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 235
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651e0088001ac8043988d58e4cc16042
+      internalID: 1187962645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -388,6 +409,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Themo Monster Sprites_0: 1187962645
       Themo Monster Sprites_10: -144060999
       Themo Monster Sprites_11: -653710302
       Themo Monster Sprites_12: 143269327

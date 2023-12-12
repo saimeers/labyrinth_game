@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - temporizador
+  - dano
+  - mini_mapa
+  - descripcion1
+  - texto
   layers:
   - Default
   - TransparentFX
@@ -11,6 +16,7 @@ TagManager:
   - 
   - Water
   - UI
+  - mapa
   - 
   - 
   - 
@@ -35,8 +41,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - minimapa
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -55,6 +60,9 @@ TagManager:
     locked: 0
   - name: way_3
     uniqueID: 3434728651
+    locked: 0
+  - name: rock
+    uniqueID: 187206083
     locked: 0
   - name: player
     uniqueID: 1511530105
