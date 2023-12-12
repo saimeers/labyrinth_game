@@ -7,6 +7,7 @@ public class menuPause : MonoBehaviour
 {
     public GameObject UIPause;
     public GameObject UIMuerte;
+    public GameObject minimapa;
     public GameObject Jugador;
     public GameObject btnPause;
     private bool juegoPause = false;
@@ -33,6 +34,7 @@ public class menuPause : MonoBehaviour
         juegoPause = true;
         UIPause.SetActive(true);
         btnPause.SetActive(false);
+        minimapa.SetActive(false);
     }
     public void Reanudar()
     {
@@ -53,6 +55,7 @@ public class menuPause : MonoBehaviour
             UIPause.SetActive(false);
             btnPause.SetActive(false);
             UIMuerte.SetActive(true);
+            minimapa.SetActive(false);
         }
     }
 

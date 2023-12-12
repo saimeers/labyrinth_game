@@ -7,6 +7,7 @@ public class PuntoLlegada : MonoBehaviour
 
     [SerializeField] private Temporizador temporizador;
     [SerializeField] private GameObject panelVictoria;
+    [SerializeField] private GameObject minimapa;
     [SerializeField] private GameObject slider;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +16,7 @@ public class PuntoLlegada : MonoBehaviour
             temporizador.DesactivarTemporizador();
             panelVictoria.SetActive(true);
             slider.SetActive(false);
+            minimapa.SetActive(false);
             Time.timeScale = 0f;
         }
     }
