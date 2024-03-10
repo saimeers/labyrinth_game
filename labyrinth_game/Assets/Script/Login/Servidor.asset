@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716f3a1886fd25a4b9e455f73ad46d45, type: 3}
+  m_Name: Servidor
+  m_EditorClassIdentifier: 
+  servidor: http://localhost/Game
+  servicios:
+  - nombre: login
+    URL: login.php
+    parametros:
+    - user
+    - password
+  - nombre: check
+    URL: check.php
+    parametros: []
+  - nombre: registrar usuario
+    URL: createUser.php
+    parametros:
+    - nombre
+    - apellido
+    - correo
+    - edad
+    - user
+    - password
+  - nombre: stats
+    URL: user_edit.php
+    parametros:
+    - user
+    - descripcion
+    - evasion
+    - penalizacion
+    - puntaje
+  ocupado: 0
+  respuesta:
+    codigo: 403
+    mensaje: Ya existe un usuario registrado
+    respuesta: 

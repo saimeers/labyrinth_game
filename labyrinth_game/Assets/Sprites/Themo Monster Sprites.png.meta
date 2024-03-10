@@ -386,7 +386,7 @@ TextureImporter:
         width: 17
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -394,6 +394,258 @@ TextureImporter:
       bones: []
       spriteID: 651e0088001ac8043988d58e4cc16042
       internalID: 1187962645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 128
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b5ffa454e88c84393534c8b8466d69
+      internalID: -559904637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_13
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 128
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60173b66001fd5b4a953c82a2923dbec
+      internalID: 1929353198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_14
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 128
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509f162d58ea73d43b91d65f4f83fd92
+      internalID: -1135362449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_15
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 160
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7886b57ee53db4893a33e43b5295b0
+      internalID: -927504960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_16
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 160
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c62ee6bca473b74dbeac9a87adfd353
+      internalID: -358864302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_17
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 160
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7901f8287ff45334993038ee7db89d63
+      internalID: -388984218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_18
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 224
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616ef2ee1b3e57a449a53152576450bf
+      internalID: 24350078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_19
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 224
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1927996ac7bb00b44936ca9dcf802090
+      internalID: -545160807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_20
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 224
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b29d4934057a9445ae79110c3f77b6a
+      internalID: -910315049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca2da1f7f9bdce44a87371d10c44a0f
+      internalID: 102652895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 191
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e737d6beba3ff4fb682a867acc7771
+      internalID: 189067745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Themo Monster Sprites_23
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 192
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3714a3b0d5fdb3142b267b0dd6666963
+      internalID: 944297245
       vertices: []
       indices: 
       edges: []
@@ -410,10 +662,22 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Themo Monster Sprites_0: 1187962645
+      Themo Monster Sprites_1: -559904637
       Themo Monster Sprites_10: -144060999
       Themo Monster Sprites_11: -653710302
       Themo Monster Sprites_12: 143269327
+      Themo Monster Sprites_13: 1929353198
+      Themo Monster Sprites_14: -1135362449
+      Themo Monster Sprites_15: -927504960
+      Themo Monster Sprites_16: -358864302
+      Themo Monster Sprites_17: -388984218
+      Themo Monster Sprites_18: 24350078
+      Themo Monster Sprites_19: -545160807
       Themo Monster Sprites_2: -322422346
+      Themo Monster Sprites_20: -910315049
+      Themo Monster Sprites_21: 102652895
+      Themo Monster Sprites_22: 189067745
+      Themo Monster Sprites_23: 944297245
       Themo Monster Sprites_3: 1392641039
       Themo Monster Sprites_4: 924925463
       Themo Monster Sprites_5: -1701406508
