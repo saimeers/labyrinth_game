@@ -80,7 +80,7 @@ public class Login : MonoBehaviour
         datos[0] = l_user.text;
         datos[1] = l_password.text;
         StartCoroutine(servidor.ConsumirServicio("login", datos,PosCargar));
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         yield return new WaitUntil(() => !servidor.ocupado);
         imLoading.SetActive(false);
     }
@@ -172,7 +172,7 @@ public class Login : MonoBehaviour
             case 205: //inicio de sesion correcto
                 Debug.Log(servidor.respuesta.respuesta);
                 usuario = JsonUtility.FromJson<DBUsuario>(servidor.respuesta.respuesta);
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
                 break;
             case 208: //stats subidas correctamente 
                 stats = JsonUtility.FromJson<DBStats>(servidor.respuesta.respuesta);

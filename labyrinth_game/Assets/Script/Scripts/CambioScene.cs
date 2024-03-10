@@ -13,7 +13,7 @@ public class CambioScene : MonoBehaviour
     public void scene()
     {
         UnityEngine.Time.timeScale = 1f;
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(0);
         Login.singleton.EndGame();
     }
 }

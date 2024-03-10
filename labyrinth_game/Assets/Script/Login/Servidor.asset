@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716f3a1886fd25a4b9e455f73ad46d45, type: 3}
   m_Name: Servidor
   m_EditorClassIdentifier: 
-  servidor: http://localhost/Game
+  servidor: https://saimer.000webhostapp.com/game
   servicios:
   - nombre: login
     URL: login.php
@@ -41,6 +41,6 @@ MonoBehaviour:
     - puntaje
   ocupado: 0
   respuesta:
-    codigo: 403
-    mensaje: Ya existe un usuario registrado
-    respuesta: 
+    codigo: 208
+    mensaje: se han actualizado correctamente los datos
+    respuesta: '"user":"angie","descripcion":buena experiencia :))))","evasion":3,"penalizacion":0,"puntaje":435}'

@@ -10,6 +10,7 @@ public class Earthquake : Event
     [SerializeField] private Slider slider;
     [SerializeField] private GameObject sliderObj;
     [SerializeField] private GameObject maps;
+    [SerializeField] private GameObject temporizador;
     [SerializeField] private GameObject cartel;
     [SerializeField] private bool abierto = false;
     [SerializeField] private bool fullTime = false;
@@ -33,7 +34,7 @@ public class Earthquake : Event
     private void Count()
     {
         timeNow -= UnityEngine.Time.deltaTime;
-
+        Destroy(temporizador);
         if(timeNow >= 0)
         {
             slider.value = timeNow;
@@ -65,7 +66,12 @@ public class Earthquake : Event
                 maps.SetActive(false);
                 cartel.SetActive(true);
                 abierto = false;
+            } 
+            else if(abierto == true)
+            {
+                puntaje.SumarPuntos(-(UnityEngine.Time.deltaTime*2));
             }
+
         }
     }
     private void CountTime(bool estado)

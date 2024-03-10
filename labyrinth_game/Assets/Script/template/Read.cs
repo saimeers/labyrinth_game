@@ -23,7 +23,7 @@ public class Read : Mechanic
     {
         Login.singleton.stats.descripcion = inputText.text;
         Login.singleton.RegistrarEstadisticas();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public override void Behaviour()
