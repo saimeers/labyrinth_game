@@ -65,11 +65,13 @@ public class Login : MonoBehaviour
     {
         registrarUsuario.SetActive(false);
         iniciarSesion.SetActive(true);
+        error.text = "";
     }
     public void SceneRegistrarUsuario()
     {
         registrarUsuario.SetActive(true);
         iniciarSesion.SetActive(false);
+        error.text = "";
     }
 
     //consumir servicios 
@@ -80,20 +82,15 @@ public class Login : MonoBehaviour
         datos[0] = l_user.text;
         datos[1] = l_password.text;
         StartCoroutine(servidor.ConsumirServicio("login", datos,PosCargar));
+        l_user.text = "";
+        l_password.text = "";
         yield return new WaitForSeconds(1.5f);
         yield return new WaitUntil(() => !servidor.ocupado);
         imLoading.SetActive(false);
     }
     IEnumerator Registrar()
     {
-        imLoading.SetActive(true);
-        string[] datos = new string[6];
-        datos[0] = nombre.text;
-        datos[1] = apellido.text;
-        datos[2] = correo.text;
-        datos[3] = edad.text;
-        datos[4] = r_user.text;
-        datos[5] = r_password.text;
+        
         if (nombre.text != "" && apellido.text != "" && correo.text != "" && 
             edad.text != "" && r_user.text != "" && r_password.text != "")
         {
@@ -129,14 +126,31 @@ public class Login : MonoBehaviour
                             }
                             else
                             {
-                                error.text = "";
+                                imLoading.SetActive(true);
+
+                                string[] datos = new string[10];
+                                datos[0] = nombre.text;
+                                datos[1] = apellido.text;
+                                datos[2] = correo.text;
+                                datos[3] = edad.text;
+                                datos[4] = r_user.text;
+                                datos[5] = r_password.text;
+                                datos[6] = "";
+                                datos[7] = "";
+                                datos[8] = "";
+                                datos[9] = "";
                                 StartCoroutine(servidor.ConsumirServicio("registrar usuario", datos, PosCargar));
+                                nombre.text = "";
+                                apellido.text = "";
+                                correo.text = "";
+                                edad.text = "";
+                                r_user.text = "";
+                                r_password.text = "";
                             }
                         }
                     }
                 }
             }
-               
         }
         else
         {
@@ -171,6 +185,7 @@ public class Login : MonoBehaviour
                 break;
             case 205: //inicio de sesion correcto
                 Debug.Log(servidor.respuesta.respuesta);
+                
                 usuario = JsonUtility.FromJson<DBUsuario>(servidor.respuesta.respuesta);
                 SceneManager.LoadScene(1);
                 break;
@@ -180,10 +195,13 @@ public class Login : MonoBehaviour
             case 402: //faltan datos para ejecutar la acción solicitada
                 error.text = servidor.respuesta.mensaje;
                 break;
-            case 403: //faltan datos para ejecutar la acción solicitada
+            case 403: //Usuario encontrado 
                 error.text = servidor.respuesta.mensaje;
                 break;
             case 404: //error
+                error.text = servidor.respuesta.mensaje;
+                break;
+            case 405: //Correo encontrado 
                 error.text = servidor.respuesta.mensaje;
                 break;
             default:

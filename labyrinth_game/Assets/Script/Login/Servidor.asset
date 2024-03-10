@@ -31,6 +31,10 @@ MonoBehaviour:
     - edad
     - user
     - password
+    - descripcion
+    - evasion
+    - penalizacion
+    - puntaje
   - nombre: stats
     URL: user_edit.php
     parametros:
@@ -41,6 +45,6 @@ MonoBehaviour:
     - puntaje
   ocupado: 0
   respuesta:
-    codigo: 208
-    mensaje: se han actualizado correctamente los datos
-    respuesta: '"user":"angie","descripcion":buena experiencia :))))","evasion":3,"penalizacion":0,"puntaje":435}'
+    codigo: 490
+    mensaje: error al registrar usuario
+    respuesta: Field 'evasion' doesn't have a default value

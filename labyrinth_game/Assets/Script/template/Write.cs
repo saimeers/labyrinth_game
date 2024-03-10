@@ -22,10 +22,10 @@ public class Write : Mechanic
         user.GetComponent<TMP_Text>().text = Login.singleton.usuario.user;
         edad.GetComponent<TMP_Text>().text = Login.singleton.usuario.edad.ToString();
         nombres.GetComponent<TMP_Text>().text = Login.singleton.usuario.nombre +" "+ Login.singleton.usuario.apellido;
-        descripcion1.GetComponent<TMP_Text>().text = Login.singleton.usuario.descripcion;
-        countMiniMap.GetComponent<TMP_Text>().text = Login.singleton.usuario.penalizacion.ToString();
-        Point.GetComponent<TMP_Text>().text = Login.singleton.usuario.puntaje.ToString();
-        countMap.GetComponent<TMP_Text>().text = Login.singleton.usuario.evasion.ToString();
+        descripcion1.GetComponent<TMP_Text>().text = Login.singleton.stats.descripcion;
+        countMiniMap.GetComponent<TMP_Text>().text = Login.singleton.stats.penalizacion.ToString();
+        Point.GetComponent<TMP_Text>().text = Login.singleton.stats.puntaje.ToString();
+        countMap.GetComponent<TMP_Text>().text = Login.singleton.stats.evasion.ToString();
     }
 
     public override void Position()
