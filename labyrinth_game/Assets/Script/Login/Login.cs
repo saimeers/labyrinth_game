@@ -45,6 +45,7 @@ public class Login : MonoBehaviour
     }
     public DBUsuario usuario;
     public DBStats stats;
+    public DBCreateUser register;
     public void IniciarSesion()
     {
         StartCoroutine(Iniciar());
@@ -191,6 +192,9 @@ public class Login : MonoBehaviour
                 break;
             case 208: //stats subidas correctamente 
                 stats = JsonUtility.FromJson<DBStats>(servidor.respuesta.respuesta);
+                error.text = servidor.respuesta.mensaje;
+                break;
+            case 210: //registro hecho satisfactoriamente
                 break;
             case 402: //faltan datos para ejecutar la acción solicitada
                 error.text = servidor.respuesta.mensaje;

@@ -96,3 +96,19 @@ public class DBStats
     public int penalizacion;
     public int puntaje;
 }
+[System.Serializable]
+public class DBCreateUser
+{
+    public int id;
+    public string nombre;
+    public string apellido;
+    public string correo;
+    public int edad;
+    public string user;
+    public string password;
+    public string descripcion;
+    public int evasion;
+    public int penalizacion;
+    public int puntaje;
+
+}

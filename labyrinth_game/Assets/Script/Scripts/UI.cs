@@ -17,7 +17,7 @@ public class UI : MonoBehaviour
     [SerializeField] public GameObject caja;
     private bool gamePause = false;
     [Header("Victoria")]
-    [SerializeField] private Earthquake temporizador;
+    [SerializeField] private Rockslide temporizador;
     [SerializeField] private GameObject vida;
 
 
@@ -86,7 +86,7 @@ public class UI : MonoBehaviour
         {
             temporizador.end();
             minimapa.SetActive(false);
-            scene(3);
+            scene(4);
         }
     }
 

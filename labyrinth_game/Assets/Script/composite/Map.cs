@@ -44,6 +44,9 @@ public class Map : PsychologicalTask
         PlayerPrefs.SetString("countMap", countMap.ToString());
         Destroy(mapa);
         Destroy(informacion);
+        score.SetActive(true);
+        btn_pause.SetActive(true);
+        capsula.SetActive(true);
         corazon.SetActive(true);
         gameObject.SetActive(false);
     }
