@@ -1,22 +1,29 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Avoid : Mechanic
 {
     [SerializeField] private Transform controlador;
-    private float count = 0;
+    [SerializeField] private float count = 0;
     [SerializeField] private Image zona;
     [SerializeField] private float radio;
     [SerializeField] private GameObject dinamiteUI;
     [SerializeField] private GameObject texto;
     [SerializeField] private GameObject cartel;
     [SerializeField] private bool activo = false;
+    [SerializeField] private AudioSource audioSourd;
+    [SerializeField] private AudioClip boom;
+    [SerializeField] private AudioClip tnt;
 
+    private void Start()
+    {
+        audioSourd = GetComponent<AudioSource>();
+    }
     private void Awake()
     {
         zona.color = Color.red;
-        PlayerPrefs.SetFloat("Obstaculo", 0);
     }
     private void Update()
     {
@@ -26,11 +33,10 @@ public class Avoid : Mechanic
            Position();
         }
         Login.singleton.stats.evasion = ((int)count);
-        PlayerPrefs.SetFloat("Obstaculo", count);
     }
     public override void Behaviour()
     {
-        texto.GetComponent<TMP_Text>().text = PlayerPrefs.GetFloat("Obstaculo").ToString();
+        texto.GetComponent<TMP_Text>().text = count.ToString();
 
         Collider2D[] obj = Physics2D.OverlapCircleAll(controlador.position, radio);
         foreach (Collider2D col in obj)
@@ -40,9 +46,15 @@ public class Avoid : Mechanic
             {
                 activo = true;
                 dinamiteUI.SetActive(true);
+                audioSourd.PlayOneShot(tnt);
+                 Invoke("DestruirObjeto", 0.1f);
                 Destroy(col.gameObject);
             }
         }
+    }
+    private void DestruirObjeto(GameObject obj)
+    {
+        Debug.Log("esperando");
     }
 
     public override void Position()
@@ -56,7 +68,10 @@ public class Avoid : Mechanic
                 zona.color = Color.red;
                 dinamiteUI.SetActive(false);
                 cartel.SetActive(false);
-                count++;
+                count = count + 1;
+                audioSourd.PlayOneShot(boom);
+                MovimientoCamara.Intance.MoverCamara(3, 2, 0.5f);
+                Invoke("DestruirObjeto", 0.1f);
                 Destroy(col.gameObject);
             }
         }

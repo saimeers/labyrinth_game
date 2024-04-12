@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Time : MonoBehaviour
+public class Tiempo : MonoBehaviour
 {
     [Header("Control")]
     [SerializeField] private Rockslide temporizador;
     [SerializeField] private GameObject slider;
-
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

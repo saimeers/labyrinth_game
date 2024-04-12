@@ -17,9 +17,17 @@ public class Rockslide : Event
     [SerializeField] private bool fullTime = false;
     [SerializeField] private int countMap;
     [SerializeField] private Thing puntaje;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip speed;
+    [SerializeField] private AudioClip soundOne;
+
     private float timeNow;
     private bool timeActive = false;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -47,6 +55,9 @@ public class Rockslide : Event
             CountTime(false);
             cartel.SetActive(true);
             fullTime = true;
+            audioSource.Stop();
+            audioSource.clip = soundOne;
+            audioSource.Play();
         }
 
         }
@@ -86,6 +97,10 @@ public class Rockslide : Event
         timeNow = timeMax;
         temporizadorActivado = false;
         CountTime(true);
+        audioSource.Stop();
+        audioSource.clip = speed;
+        audioSource.Play();
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -40,7 +40,7 @@ public class Labyrinth : ActivityComplementary {
     public override void starGame()
     {
         UnityEngine.Time.timeScale = 1f;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public override void gameLoop()

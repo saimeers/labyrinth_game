@@ -4,16 +4,14 @@ public class PsychologicalTask : PsychologicalTaskComponent
 {
     [SerializeField] private Life task1;
     [SerializeField] private Map task2;
-    public PsychologicalTask(){
-	}
+     private AudioSource audioSourd;
+    [SerializeField] private AudioClip hit;
 
-    /**
-	Se generan los métodos operacionales de las clases
-	*/
 
     private void Start()
     {
         task1.life();
+        audioSourd = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -29,10 +27,13 @@ public class PsychologicalTask : PsychologicalTaskComponent
         if (collision.gameObject.tag == "Finish")
         {
             task2.end();
+            audioSourd.Play();
         }
         
         if (collision.gameObject.tag == "dano")
         {
+            audioSourd.PlayOneShot(hit);
+            MovimientoCamara.Intance.MoverCamara(4, 2, 1f);
             Destroy(task1.MyCanvas.transform.GetChild(task1.CantCorazon + 1).gameObject);
             task1.CantCorazon -= 1;
         }

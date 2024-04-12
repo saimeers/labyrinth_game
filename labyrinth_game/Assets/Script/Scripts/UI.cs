@@ -86,7 +86,7 @@ public class UI : MonoBehaviour
         {
             temporizador.end();
             minimapa.SetActive(false);
-            scene(4);
+            scene(5);
         }
     }
 

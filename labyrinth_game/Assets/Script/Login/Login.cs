@@ -120,10 +120,9 @@ public class Login : MonoBehaviour
                         }
                         else
                         {
-                            if (!Regex.IsMatch(r_password.text, "^(?=.*[a-z])(?=.*[A-Z])" +
-                                "(?=.*[0-9])(?=.*[@$!%*#?&])[A-Za-z0-9@$!%*#?&]{8,}$"))
+                            if (!Regex.IsMatch(r_password.text, "^(?=.*[0-9])[A-Za-z0-9]{6,}$"))
                             {
-                                error.text = "La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un símbolo";
+                                error.text = "La contraseña debe tener al menos 6 caracteres y un número.";
                             }
                             else
                             {
@@ -188,7 +187,7 @@ public class Login : MonoBehaviour
                 Debug.Log(servidor.respuesta.respuesta);
                 
                 usuario = JsonUtility.FromJson<DBUsuario>(servidor.respuesta.respuesta);
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
                 break;
             case 208: //stats subidas correctamente 
                 stats = JsonUtility.FromJson<DBStats>(servidor.respuesta.respuesta);
